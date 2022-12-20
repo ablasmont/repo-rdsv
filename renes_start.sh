@@ -59,7 +59,7 @@ echo "## 3. En VNF:access agregar un bridge y configurar IPs y rutas"
 $ACC_EXEC ovs-vsctl add-br brint
 $ACC_EXEC ifconfig net1 $VNFTUNIP/24
 $ACC_EXEC ip link add vxlanacc type vxlan id 0 remote $HOMETUNIP dstport 4789 dev net1
-$ACC_EXEC ip link add vxlanint type vxlan id 1 remote $IPCPE dstport 8742 dev net1
+$ACC_EXEC ip link add vxlanint type vxlan id 1 remote $IPCPE dstport 8742 dev eth0
 $ACC_EXEC ovs-vsctl add-port brint vxlanacc
 $ACC_EXEC ovs-vsctl add-port brint vxlanint
 $ACC_EXEC ifconfig vxlanacc up
