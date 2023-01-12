@@ -3,23 +3,23 @@ entries:
   accesschart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-13T17:14:36.360983699+01:00"
+    created: "2023-01-12T15:48:45.698902381+01:00"
     description: A Helm chart for Kubernetes
-    digest: b5c7e9a904b3d6901dcfc2b51bab98cc52675809b067a59c25bcd4978dd89134
+    digest: ec279f5bd3f31065d962c0839bad55907b8fcfbc7a3bc82b32a025822a708df0
     name: accesschart
     type: application
     urls:
-    - https://github.com/ablasmont/repo-rdsv/accesschart-0.1.0.tgz
+    - https://ablasmont.github.io/repo-rdsv/accesschart-0.1.0.tgz
     version: 0.1.0
   cpechart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-12-13T17:14:36.364287123+01:00"
+    created: "2023-01-12T15:48:45.725171207+01:00"
     description: A Helm chart for Kubernetes
-    digest: 27f24cd21ee838b9104b7622fde560f51aa9cdf6ccb763f5d0fef62a49e44b15
+    digest: 90e8ff5c0223d622ac0da0b7ef39c027abb681ff8cf17d2abfdc916e7690dc74
     name: cpechart
     type: application
     urls:
-    - https://github.com/ablasmont/repo-rdsv/cpechart-0.1.0.tgz
+    - https://ablasmont.github.io/repo-rdsv/cpechart-0.1.0.tgz
     version: 0.1.0
-generated: "2022-12-13T17:14:36.36002119+01:00"
+generated: "2023-01-12T15:48:45.696686224+01:00"
