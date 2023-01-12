@@ -77,7 +77,12 @@ SPAIN
         sleep 5
         ovs-vsctl add-br br0
         ovs-vsctl add-port br0 eth1
-        ovs-vsctl add-port br0 vxlan1 -- set interface vxlan1 type=vxlan options:remote_ip=10.255.0.1
+        sleep 5
+        ovs-vsctl add-port br0 vxlan1 -- set interface vxlan1 type=vxlan options:remote_ip=10.255.0.1 options: dst_port:4789 options:key:flow options:local_ip=eth2
+        ovs-vsctl set bridge br0 protocols=OpenFlow10 fail-mode=secure
+        ovs-vsctl set-controller br0 tcp:10.255.0.1:6633
+        ovs-vsctl set-manager ptcp:6632
+    
     </exec>
   </vm>
   <vm name="h21" type="lxc" exec_mode="lxc-attach" arch="x86_64">
@@ -114,7 +119,11 @@ SPAIN
         sleep 5
         ovs-vsctl add-br br0
         ovs-vsctl add-port br0 eth1
-        ovs-vsctl add-port br0 vxlan1 -- set interface vxlan1 type=vxlan options:remote_ip=10.255.0.3
+        sleep 5
+        ovs-vsctl add-port br0 vxlan1 -- set interface vxlan1 type=vxlan options:remote_ip=10.255.0.3 options: dst_port:4789 options:key:flow options:local_ip=eth2
+        ovs-vsctl set bridge br0 protocols=OpenFlow10 fail-mode=secure
+        ovs-vsctl set-controller br0 tcp:10.255.0.3:6633
+        ovs-vsctl set-manager ptcp:6632
     </exec>
   </vm>
 </vnx>
