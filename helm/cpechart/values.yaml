@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ablasmont/vnf-img
+  repository: 192.168.56.11:32000/vnf-lia-alvaro
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
